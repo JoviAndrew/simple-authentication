@@ -21,31 +21,43 @@ module.exports = {
                 message: "success"
             })
         })
+        .catch(function(err){
+            res.json({
+                message: err
+            })
+        })
     },
     loginUser: function(req, res){
         let username = req.body.username;
         let password = req.body.password;
 
-        user.findOne({
-            username: username
-        })
-        .then(function(userData){
-            if(!bcrypt.compareSync(password, userData.password)){
-                res.json({
-                    message: "username or password is wrong"
-                })
-            }else{
-                var token = jwt.sign({ username: username }, process.env.SECRET);
-                res.status(200).json({
-                    message: "Success login",
-                    token: token
-                })
-            }
-        })
-        .catch(function(err){
-            res.status(500).json({
-                message: err
+        if(password == '' || username == ''){
+            res.json({
+                message: 'must fill username or password'
             })
-        })
-    }
+        }else{
+            user.findOne({
+                username: username
+            })
+            .then(function(userData){
+                if(!bcrypt.compareSync(password, userData.password)){
+                    res.json({
+                        message: "username or password is wrong"
+                    })
+                }else{
+                    var token = jwt.sign({ username: username }, process.env.SECRET);
+                    res.status(200).json({
+                        message: "Success login",
+                        token: token
+                    })
+                }
+            })
+            .catch(function(err){
+                res.status(500).json({
+                    message: err
+                })
+            })
+            
+        }
+    },
 }
