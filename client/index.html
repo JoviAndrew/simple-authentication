@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+              crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 col-sm-12">
+            <div class="login">
+                <h1 class="loginTitle">Login</h1>
+                <input class="usernameLogin" type="text" placeholder="username">
+                <input class="passwordLogin" type="password" placeholder="password">
+                <button class="btnLogin" onclick="login()">Login</button>
+                <script src="./script/indexScript.js"></script>
+                <label class="linkRegis" onclick="changeToRegister()">Register</label>
+            </div>
+            <div class="register">
+                <h1 class="regisTitle">Register</h1>
+                <input class="usernameRegis" type="text" placeholder="username">
+                <input class="passRegis" type="password" placeholder="password">
+                <input class="confirmPass" type="password" placeholder="confirm password">
+                <button class="btnRegis">Login</button>
+                <script src="./script/indexScript.js"></script>
+                <label class="linkLogin" onclick="changeToLogin()">Back</label>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</body>
+</html>
