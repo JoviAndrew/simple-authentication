@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+//Require Mongoose
+var mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema,
-    ObjectId = Schema.ObjectId;
- 
-const User = new userSchema({
- username: String,
- password: String,
+//Define a schema
+var Schema = mongoose.Schema;
 
+var userSchema = new Schema({
+    username: String,
+    password: String
 });
 
-let user = mongoose.model('User', userSchema);
+let user = mongoose.model('user', userSchema);
 
 module.exports = user;

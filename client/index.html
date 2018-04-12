@@ -10,6 +10,8 @@
               crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 <body>
@@ -29,7 +31,7 @@
                 <input class="usernameRegis" type="text" placeholder="username">
                 <input class="passRegis" type="password" placeholder="password">
                 <input class="confirmPass" type="password" placeholder="confirm password">
-                <button class="btnRegis">Login</button>
+                <button class="btnRegis" onclick="register()">Register</button>
                 <script src="./script/indexScript.js"></script>
                 <label class="linkLogin" onclick="changeToLogin()">Back</label>
             </div>
